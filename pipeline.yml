@@ -1,0 +1,10 @@
+      - name: Install Bandit
+        run: pip install bandit
+
+      - name: Run SAST Scan
+        run: bandit -r .
+      - name: Install Safety
+        run: pip install safety
+
+      - name: Run Dependency Scan
+        run: safety check
